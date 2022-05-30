@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
@@ -6,9 +7,10 @@ import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
 
 function App() {
+  const [toggle, setToggle] = useState(false);
   return (
-    <div className="App">
-      <Header />
+    <div className={toggle ? "App App--fixed" : "App"}>
+      <Header toggle={toggle} setToggle={setToggle} />
       <Content />
       <Footer />
     </div>

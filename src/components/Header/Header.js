@@ -1,10 +1,7 @@
-import { useState } from "react";
 import logo from "../../assets/img/logo.jpg";
 import "./Header.scss";
 
-export default function Header() {
-  const [toggle, setToggle] = useState(false);
-
+export default function Header({toggle, setToggle}) {
   return (
     <header className="header container">
       <div className="header__top display-flex-center-wrap justify-content-between full-width">

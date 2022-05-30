@@ -6,6 +6,11 @@
 
 .App {
   font-family: 'Lato', sans-serif;
+
+  &--fixed {
+    overflow-y: hidden;
+    max-height: 100vh;
+  }
 }
 
 /**
