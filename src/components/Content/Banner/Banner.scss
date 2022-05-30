@@ -1,0 +1,143 @@
+@import '../../../assets/style/commons/mixins.scss';
+
+.banner {
+    height: 590px;
+    // display: flex;
+    // justify-content: center;
+
+    @include tablet {
+        height: 400px;
+    }
+
+    @include mobile {
+        height: 240px;
+    }
+
+    @include smMobile {
+        height: 190px;
+    }
+
+    &-wrap {
+        // height: 100%;
+
+        .carousel-item {
+            position: relative;
+        }
+        
+        &__img {
+            // width: 100%;
+            max-width: 100%;
+            height: 590px;
+            @include img();
+
+            @include tablet {
+                height: 400px;
+            }
+
+            @include mobile {
+                height: 240px;
+            }
+
+            @include smMobile {
+                height: 190px;
+            }
+        }
+
+        &__info {
+            // color: #fff;
+            // position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // text-align: center;
+            padding: 44px 0 38px;
+            background: linear-gradient(to right, transparent, rgba(0, 0, 0, .4), transparent);
+
+            @include mobile {
+                padding: 20px 30px;
+                @include flexbox();
+                flex-direction: column;
+            }
+
+            .banner__category {
+                h3 {
+                    font-size: 14px;
+                    // color: #ffffff;
+                    // font-weight: 700;
+
+                    @include smMobile {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .banner__title {
+                margin: 24px 0;
+
+                @include mobile {
+                    margin: 10px 0 0;
+                }
+                
+                h3 {
+                    font-size: 24px;
+                    // color: #ffffff;
+                    // text-transform: uppercase;
+                    // font-weight: 700;  
+
+                    @include mobile {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+
+                    @include smMobile {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .banner__info {
+                h3 {
+                    font-size: 16px;
+                    // color: #ffffff;
+                    // font-weight: 400;
+                    font-family: "Montserrat";
+    
+                    @include mobile {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Disable pagination carosel */
+.carousel {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    background:rgba(0, 0, 0, .2);
+    transition: all .5s;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background:rgba(0, 0, 0, .4);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 60px;
+    height: 100px;
+
+    @include mobile {
+        width: 30px;
+    }
+}

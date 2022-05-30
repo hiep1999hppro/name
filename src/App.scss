@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Lato', sans-serif;
+}
+
+/**
+* 1. Common style
+* -------------------------------------------------------------------
+*/
+@import "assets/style/commons/variables.scss";
+@import "assets/style/commons/mixins.scss";
+@import "assets/style/commons/reset.scss";
+
+@import "assets/style/commons/fonts.scss";
+@import "assets/style/commons/general.scss";
+// @import "assets/style/commons/grid.scss";
+// @import "assets/style/commons/font-icons.scss";
+@import "assets/style/commons/elements.scss";
+@import "assets/style/commons/colors.scss";
+@import "assets/style/commons/transition.scss";
+@import "assets/style/commons/aspect-ratio.scss";
+@import "assets/style/commons/shared.scss";
+@import "assets/style/commons/customform.scss";
+@import "assets/style/commons/aspect.scss";
+/**
+* 2. Blocks (Shortcode/Widget)
+* -------------------------------------------------------------------
+*/
+@import "assets/style/block/_loading";
+@import "assets/style/block/_button.scss";
+@import "assets/style/block/_dropdown.scss";
+@import "assets/style/block/_tooltip.scss";
+
+/**
+* 3. partials style
+* -------------------------------------------------------------------
+*/
+// @import "./partials/library";
